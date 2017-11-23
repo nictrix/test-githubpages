@@ -46,7 +46,12 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+#set :relative_links, true
+
 configure :build do
+  set :http_prefix, '/test-githubpages/'
+
+#  activate :relative_assets
   activate :minify_css
   activate :minify_javascript
 end

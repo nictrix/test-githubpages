@@ -7,37 +7,35 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= current_page.data.title || "Kitchen-Terraform" %></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/highlighting.css">
-    <link rel="stylesheet" href="stylesheets/site.css">
+    <%= stylesheet_link_tag 'highlighting' %>
+    <%= stylesheet_link_tag 'site' %>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="javascripts/site.js"></script>
+    <%= javascript_include_tag 'site' %>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light header">
-      <a class="navbar-brand" href="">
-        Kitchen-Terraform
-      </a>
+      <%= link_to 'Kitchen-Terraform', '/', :class => 'navbar-brand' %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="docs/start.html">Getting Started</a>
+            <%= link_to 'Getting Started', '/docs/start.html', :class => 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="docs/index.html">Docs</a>
+            <a class="nav-link" href="/docs/index.html">Docs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="examples/index.html">Examples</a>
+            <a class="nav-link" href="/examples/index.html">Examples</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="/about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="community/index.html">Community</a>
+            <a class="nav-link" href="/community/index.html">Community</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/newcontext-oss/kitchen-terraform">
@@ -54,7 +52,7 @@
       <div class="container">
         <span class="text-muted">Community driven, created and maintained by
           <a href="http://newcontext.com">
-            <img src="images/newcontext_logo.png" class="d-inline-block" style="vertical-align: sub;" width="30" height="24" alt="newcontext logo">
+            <%= image_tag "newcontext_logo.png", :class => "d-inline-block", :style => "vertical-align: sub;", :width => "30", :height => "24", :alt => "newcontext logo" %>
             New Context Services, Inc.
           </a>
         </span>
